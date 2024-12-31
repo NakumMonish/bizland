@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+              #link-116 {
+  color: #dd1717;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+#link-116::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #ec0c0c;
+  width: 0;
+  transition: width 0.2s ease;
+}
+
+#link-116:hover::after {
+  width: 100%;
+  animation: heartbeat116 1s infinite;
+}
+
+@keyframes heartbeat116 {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+img .vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img .vert-move {
+    -webkit-animation: mover 10s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+    /* Modal Animation */
+    .modal-navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #343a40;
+      padding: 10px 0;
+    }
+    .modal-navbar .nav-link {
+      color: #ffffff;
+      font-size: 16px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .modal-navbar .nav-link:hover {
+      color: #007bff;
+    }
+    /* Modal Styling */
+    .modal-content {
+      border-radius: 10px;
+    }
+    .modal-header {
+      background-color: #212529;
+      color: #ffffff;
+    }
+    .modal-footer {
+      justify-content: center;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .modal-navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .modal-navbar .nav-link {
+        margin: 5px 0;
+      }
+    }
+
+    
+    :root {
+  /* --default-color: #f1f4f7; Default hover color */
+  --hover-scale: 1.2; /* Scale size on hover */
+  --hover-shadow: 0 8px 15px rgba(179, 62, 62, 0.2); /* Shadow effect */
+}
+
+.social-icon-container {
+  display: flex; /* Use flexbox for alignment */
+  /* gap: 30px;Space between icons */
+  letter-spacing: 20px;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Align icons vertically */
+}
+
+.social-icon {
+  display: inline-flex; /* Keep the element inline */
+  /* background-color:rgb(214, 222, 226); Fallback background */
+
+  font-size: 17px;
+ width: 40px;
+  height: 40px; 
+  border:  2px solid white;
+  justify-content:center; /* Center icon inside the circle */
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  transition: all ease-in-out 0.3s;
+}
+
+
+.social-icon:hover {
+  background-color: var(--default-color); /* Change background color on hover */
+  color:#696767!important;
+  border-color: #696767;
+  transform: scale(var(--hover-scale)); /* Scale up on hover */
+  /* box-shadow: var(--hover-shadow); Add shadow on hover */
+}
+
+
+.demo22.active{
+
+  color: orange;
+}
+
+/* Navbar styling */
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  min-width: 200px;
+}
+
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu > li {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  margin-left: -1px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+
+
+
+    </style>
+</head>
+<body
+
+style="position: relative"
+data-syp="scroll"
+data-target=".navbar"
+data-offset="0">
+    
+    <nav class="navbar navbar-expand-md" style="height: 70px; background-color: #f2f2f2;">
+   
+        <div class="container">
+       
+        
+            <a class="navbar-brand text-dark" href="#Home"><h3 style="font-weight: 700;">ZenBlog</h3></a>
+            
+      
+           
+            <div class="collapse navbar-collapse">
+              <nav class="navbar navbar-expand-lg">
+                <ul class="navbar-nav align-items-center pl-5" style="margin-left: 50px;">
+                  <!-- Home -->
+               
+                  <li class="nav-item" id="link-116">
+                    <a class="nav-link text-dark" href="ZenBlog.html" data-target="_blank"><h6 class="demo24">Home</h6></a>
+                  </li>
+                  <li class="nav-item" id="link-116">
+                    <a class="nav-link text-dark " href="About.html" data-target="_blank"><h6 class="demo24">About</h6></a>
+                  </li>
+                  <li class="nav-item" id="link-116">
+                    <a class="nav-link text-dark" href="Singal Page.html" class=""><h6>Singal Post</h6></a>
+                  </li>    
+             
+                  <li class="nav-item dropdown">
+
+                    <a class="nav-link text-dark" href="Categories.html" class=""><h6>Categories</h6> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                
+                    <ul class="dropdown-menu mt-2">
+                      <li><a href="category.html" class="dropdown-item">Category 1</a></li>
+                     
+                      <li><a href="category.html" class="dropdown-item">Category 2</a></li>
+                      <li><a href="category.html" class="dropdown-item">Category 3</a></li>
+                      <li><a href="category.html" class="dropdown-item">Category 4</a></li>
+                    </ul>
+                  </li>
+              
+                  <li class="nav-item" id="link-116">
+                    <a class="nav-link  demo22 active" href="Contact.html"><h6>Contact</h6></a>
+                  </li>  
+           
+                  <!-- Contact -->
+               
+                </ul>
+              </nav>
+              
+         
+              <!-- <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="#">Login</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">Registration</a>
+                 </li>    
+               </ul>
+            </div> -->
+            </div>
+        
+      
+           
+      
+            <h4 class="ml-auto">
+              <i class="ri-instagram-line"></i>
+              <i class="ri-twitter-x-line"></i>
+              <i class="ri-facebook-box-fill"></i>
+              <i class="ri-linkedin-box-fill"></i></h4>
+      
+            
+            
+                <button type="button" class="navbar-toggler ml-1 border border-6 text-black" data-toggle="modal" data-target="#myModal">
+                
+                  <h4 class="font-weight-bold"><i class="ri-menu-line"></i></h4>
+                </button>
+                
+      
+               <!-- Modal -->
+               <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="false">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">Modal with Navigation</h4>
+                      
+                      <button type="button" class="close text-white" data-dismiss="modal"><h1 style="margin-top: -10px;">&times;</h1></button>
+          
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                      <!-- Navigation Bar inside Modal -->
+                      <div class="modal-navbar">
+                        <a class="nav-link" href="ZenBlog.html" data-target="_blank">Home</a>
+                        <a class="nav-link" href="About.html" data-target="_blank">About</a>
+                        <a class="nav-link" href="Singal Page.html" data-target="_blank">Singal Post</a>
+                        <a class="nav-link" href="Categories.html">Categories</a>
+                        <a class="nav-link" href="#contact">Contact</a>
+                      </div>
+                    </div>
+                    <!-- Modal Footer -->
+      
+                    <div class="modal-footer">
+                      
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+         
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Bootstrap JS -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+              
+    </nav>
+<br>
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    
+     
+    <div class="row">
+<div class="col-sm-12">
+  <div style="width: 100%; height: 400px;"> <!-- Adjust height and width here -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d356933.8714888409!2d10.413661869378636!3d45.65994086120074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781eca8aec020b9%3A0x91dcf07c1c969bb8!2sGarda!5e0!3m2!1spl!2spl!4v1672244147501!5m2!1spl!2spl" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" 
+        style="width: 100%; height: 100%; border: 0;">
+    </iframe>
+</div>
+
+</div>
+
+    </div>
+
+
+
+    <div class="row">
+     
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-icon pl-4 pt-5"><h2 class="d-flex align-items-center justify-content-center rounded" style="border-radius: 0px; width: 40px; height: 40px; background-color: #465367;" ><i class=" ri-map-pin-line text-white" style="font-size: 20px;"></i></h2></div>
+            <div class="card-title font-weight-bold " style="margin-left: 90px;  margin-top: -60px;"><h5>Address</h5></div>
+            <div class="card-Address" style="margin-left:90px; margin-top: -8px;">A108 Adam Street, New York,Ny 535022</div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-icon pl-4 pt-5"><h2 class="bg-dark d-flex align-items-center justify-content-center  rounded" style="border-radius: 0px; width: 40px; height: 40px; background-color: #465367;"><i class="ri-phone-line text-white" style="font-size: 20px;"></i></h2></div>
+            <div class="card-title font-weight-bold" style="margin-left: 90px;  margin-top: -60px;"><h5>Call Us</h5></div>
+            <div class="card-Address" style="margin-left:90px; margin-top: -8px;">+1 5589 55488 55</div>
+          </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-icon pl-4 pt-5"><h2 class="bg-dark d-flex align-items-center justify-content-center  rounded" style="border-radius: 0px; width: 40px; height: 40px; background-color: #465367;"><i class="ri-mail-line text-white" style="font-size: 20px;"></i></h2></div>
+            <div class="card-title font-weight-bold" style="margin-left: 90px;  margin-top: -60px;"><h5>Email Us</h5></div>
+            <div class="card-Address" style="margin-left:90px; margin-top: -8px;">info@example.com</div>
+          </div>
+        </div>
+  
+ 
+      </div>
+
+      <div class="col-sm-8 mt-5">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="Your Name">Your Name:</label>
+            <input type="text"  class="form-control" name="Your Name">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="Your Email">Your Email:</label>
+            <input type="email"  class="form-control" name="Your Email">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="Subject">Subject:</label>
+            <input type="text" class="form-control" name="your Subject">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="Subject">Message</label>
+            <textarea type="textarea" class="form-control" name="your Message"></textarea>
+          </div>
+        </div>
+      </div>
+<br><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group text-center">
+
+            <button class="text-white  border-0 w-25 rounded " style="height: 50px; background-color: #6d6969; margin-top: -40px;">Send&nbsp;Message</button>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+    </div> 
+  
+    
+ </div>
+</div>
+</div>
+
+<br><br>
+    <footer class="bg-dark">
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-12 mt-5">
+                <h3 class="text-white">ZenBlog</h3>
+                <br><br>
+                <p class="text-white">A108 Adam Street</p>
+                <p class="text-white">New York, NY 535022</p>
+                <p class="text-white">Phone: +1 5589 55488 55</p>
+                <p class="text-white">Email: info@example.com</p>
+              </div>
+            </div>
+    <br>
+            <div class="row">
+              <div class="col-sm-12">
+                <p>
+                  <i class="ri-twitter-x-line rounded-circle social-icon text-white"></i>
+                  <i class="ri-facebook-circle-fill rounded-circle social-icon text-white ml-3"></i>
+                  <i class="ri-instagram-line rounded-circle social-icon text-white ml-3"></i>
+                  <i class="ri-linkedin-box-fill rounded-circle social-icon text-white ml-3"></i>
+                </p>
+    
+              </div>
+              <!-- <div class="col-sm-1"><h4><i class="ri-twitter-x-line text-white"></i></h4></div>
+              
+              <div class="col-sm-1"><h4><i class="ri-facebook-circle-fill text-white pl-1"></i></h4></div>
+    
+              
+              <div class="col-sm-1"><h4><i class="ri-instagram-line text-white pl-1"></i></h4></div>
+    
+              
+              <div class="col-sm-1"><h4><i class="ri-linkedin-box-fill text-white pl-1"></i></h4></div> -->
+            </div>
+    
+          </div>
+    
+          <div class="col-sm-8">
+            <div class="row">
+            
+              <div class="col-sm-3 mt-5">
+                <h5 class="text-white font-weight-bold">Useful Links</h5>
+                
+                <p class="text-white">Home</p>
+                <p class="text-white">About us</p>
+                
+                <p class="text-white">Services</p>
+                
+                <p class="text-white">Terms of service</p>
+    
+                <p class="text-white">Privacy policy</p>
+              </div>
+    
+              
+              <div class="col-sm-3 mt-5">
+                <h5 class="text-white font-weight-bold">Our Services</h5>
+                
+                <p class="text-white">Web Design</p>
+                <p class="text-white">Web Development</p>
+                
+                <p class="text-white">Product Management</p>
+                
+                <p class="text-white">Marketing</p>
+    
+                <p class="text-white">Graphic Design</p>
+              </div>
+    
+              
+              <div class="col-sm-3 mt-5">
+                <h5 class="text-white font-weight-bold">Hic solutasetp</h5>
+                
+                <p class="text-white">Molestiae accusamus iure</p>
+                <p class="text-white">Excepturi dignissimos</p>
+                
+                <p class="text-white">Suscipit distinctio</p>
+                
+                <p class="text-white">Dilecta</p>
+    
+                <p class="text-white">Sit quas consectetur</p>
+              </div>
+    
+              
+              <div class="col-sm-3 mt-5">
+                <h5 class="text-white font-weight-bold">Nobis illum</h5>
+                
+                <p class="text-white">Ipsam</p>
+                <p class="text-white">Laudantium dolorum</p>
+                
+                <p class="text-white">Dinera</p>
+                
+                <p class="text-white">Trodelas</p>
+    
+                <p class="text-white">Flexo</p>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+    <br>
+        <div class="border border-left-0
+        
+        border border-right-0
+        
+        border border-top-0 pl-2"></div>
+    
+      <br>
+      
+         <div class="row">
+          <div class="col-sm-12 text-center">
+            <h6 class="text-white">© Copyright ZenBlog All Rights Reserved</h6>
+            <h6 class="text-white">Designed by BootstrapMade</h6>
+          </div>
+         </div>
+    
+    
+    
+      </div>
+    
+    </footer>
+    
+
+
+</body>
+</html>

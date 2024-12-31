@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    #link-116 {
+  color: #dd1717;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+#link-116::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #ec0c0c;
+  width: 0;
+  transition: width 0.2s ease;
+}
+
+#link-116:hover::after {
+  width: 100%;
+  animation: heartbeat116 1s infinite;
+}
+
+@keyframes heartbeat116 {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+img .vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img .vert-move {
+    -webkit-animation: mover 10s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+    /* Modal Animation */
+    .modal-navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #343a40;
+      padding: 10px 0;
+    }
+    .modal-navbar .nav-link {
+      color: #ffffff;
+      font-size: 16px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .modal-navbar .nav-link:hover {
+      color: #007bff;
+    }
+    /* Modal Styling */
+    .modal-content {
+      border-radius: 10px;
+    }
+    .modal-header {
+      background-color: #212529;
+      color: #ffffff;
+    }
+    .modal-footer {
+      justify-content: center;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .modal-navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .modal-navbar .nav-link {
+        margin: 5px 0;
+      }
+    }
+
+    h5 a{
+
+        text-decoration: none!important;
+        color: #212529;
+    }
+
+    #demo2:hover{
+        background-color: #1ba0dd;
+       
+    }
+
+    .card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+} 
+
+
+:root {
+  /* --default-color: #f1f4f7; Default hover color */
+  --hover-scale: 1.2; /* Scale size on hover */
+  --hover-shadow: 0 8px 15px rgba(179, 62, 62, 0.2); /* Shadow effect */
+}
+
+.social-icon-container {
+  display: flex; /* Use flexbox for alignment */
+  /* gap: 30px;Space between icons */
+  letter-spacing: 20px;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Align icons vertically */
+}
+
+.social-icon {
+  display: inline-flex; /* Keep the element inline */
+  /* background-color:rgb(214, 222, 226); Fallback background */
+
+  font-size: 17px;
+ width: 40px;
+  height: 40px; 
+  border:  2px solid white;
+  justify-content:center; /* Center icon inside the circle */
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  transition: all ease-in-out 0.3s;
+}
+
+
+.social-icon:hover {
+  background-color: var(--default-color); /* Change background color on hover */
+  color:#696767!important;
+  border-color: #696767;
+  transform: scale(var(--hover-scale)); /* Scale up on hover */
+  /* box-shadow: var(--hover-shadow); Add shadow on hover */
+}
+
+
+.demo22.active{
+  color: orange;
+}
+
+
+
+/* Navbar styling */
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  min-width: 200px;
+}
+
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu > li {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  margin-left: -1px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+
+
+</style>
+</head>
+<body
+
+style="position: relative"
+
+data-syp="scroll"
+
+data-target=".navbar"
+
+data-offset="0"
+
+>
+
+        
+<nav class="navbar navbar-expand-md" style="height: 70px; background-color: #f2f2f2;">
+   
+    <div class="container">
+   
+    
+        <a class="navbar-brand text-dark" href="#Home"><h3 style="font-weight: 700;">ZenBlog</h3></a>
+        
+  
+       
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav aling item center pl-5" style="margin-left: 50px;">
+  
+            <li class="nav-item" id="link-116">
+              <a class="nav-link text-dark" href="ZenBlog.html"  data-target="_blank"><h6 class="demo24">Home</h6></a>
+            </li>
+            <li class="nav-item" id="link-116">
+              <a class="nav-link  demo22 active" href="About.html"data-target="_blank"><h6 class="demo24">About</h6></a>
+            </li>
+            <li class="nav-item" id="link-116">
+              <a class="nav-link text-dark" href="Singal Page.html"  data-target="_blank"><h6 class="demo24">Singal Post</h6></a>
+            </li>    
+              
+            <li class="nav-item dropdown mt-2">
+
+              <a class="nav-link text-dark" href="Categories.html" class=""><h6>Categories</h6><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          
+              <ul class="dropdown-menu ">
+                <li><a href="category.html" class="dropdown-item">Category 1</a></li>
+               
+                <li><a href="category.html" class="dropdown-item">Category 2</a></li>
+                <li><a href="category.html" class="dropdown-item">Category 3</a></li>
+                <li><a href="category.html" class="dropdown-item">Category 4</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item" id="link-116">
+                  <a class="nav-link text-dark" href="Contact.html"><h6 class="demo24">Contact</h6></a>
+                </li>  
+                
+        </ul>
+          
+     
+          <!-- <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+               <a class="nav-link" href="#">Login</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Registration</a>
+             </li>    
+           </ul>
+        </div> -->
+        </div>
+    
+  
+       
+  
+        <h4 class="ml-auto">
+          <i class="ri-instagram-line"  id="demo3"></i>
+          <i class="ri-twitter-x-line"  id="demo3"></i>
+          <i class="ri-facebook-box-fill"  id="demo3"></i>
+          <i class="ri-linkedin-box-fill"  id="demo3"></i></h4>
+  
+        
+        
+            <button type="button" class="navbar-toggler ml-1 border border-6 text-black" data-toggle="modal" data-target="#myModal">
+            
+              <h4 class="font-weight-bold"><i class="ri-menu-line"></i></h4>
+            </button>
+            
+  
+           <!-- Modal -->
+           <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Modal with Navigation</h4>
+                  
+                  <button type="button" class="close text-white" data-dismiss="modal"><h1 style="margin-top: -10px;">&times;</h1></button>
+      
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                  <!-- Navigation Bar inside Modal -->
+                  <div class="modal-navbar">
+                    <a class="nav-link" href="ZenBlog.html" data-target="_blank">Home</a>
+                    <a class="nav-link" href="" data-target="_blank">About</a>
+                    <a class="nav-link" href="Singal Page.html" data-target="_blank">Singal Post</a>
+                    <a class="nav-link" href="#portfolio">Categories</a>
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                  </div>
+                </div>
+                <!-- Modal Footer -->
+  
+                <div class="modal-footer">
+                  
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+     
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Bootstrap JS -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+          
+  </nav>
+<br><br>
+  <div class="container">
+    
+    <div class="row">
+        <div class="col-sm-12 d-flex align-items-center justify-content-between border border-left-0
+        border border-right-0
+        
+        border border-top-0">
+          <h4>About</h4>
+           <h5 style="color:black;"><span><a href="ZenBlog.html" data-target="_blank">Home</a></span>/About</h5>
+        </div>
+      </div>
+
+  </div>
+<br>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-6 mt-3">
+            <h5>Who We Are</h5>
+        
+            <h3>Unleashing Potential with Creative Strategy</h3>
+        
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <p><i class="ri-arrow-right-circle-line"></i>  Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <p><i class="ri-arrow-right-circle-line"></i>   Duis aute irure dolor in reprehenderit in voluptate velit.
+            </p>
+
+            <p><i class="ri-arrow-right-circle-line"></i>   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+            </p>
+
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <img class="img-fluid rounded mt-3" src="about-company-1.jpg" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="column">
+
+                        <div class="row">
+                            <div class="col-sm-12 flex-column">
+                                <img class="img-fluid rounded mt-3" src="about-company-2.jpg" alt="">
+                                
+                                <img class="img-fluid rounded mt-3" src="about-company-3.jpg" alt="">
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+  </div>
+<br>
+  <div class="container">
+    
+    <div class="row">
+        <div class="col-sm-6 d-flex align-items-center justify-content-between">
+          <h4>Team</h4>
+          </div>
+          <div class="col-sm-6">           
+          
+          <p style="color:black;">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</span></p>
+      </div>
+      </div>
+
+      <div class=" border border-left-0
+      border border-right-0
+      
+      border border-top-0"></div>
+
+  </div>
+<br>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+
+          <div class="card shadow-lgbg-white">
+            <div class="row pl-5">
+                <div class="col-sm-4 pl-1">
+                    <img class="img-fluid rounded-circle mt-5" style="height: 120px; width: 120px;" src="team-1.jpg" alt="">
+                </div>
+                <div class="col-sm-8 pl-4 mt-3">
+                    <h5>Walter White</h5>
+
+                    <p class="border border-left-0
+                    border border-right-0
+                    
+                    border border-top-0">Chief Executive Officer</p>
+                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                  <div class="row">
+
+                      <div class="col-sm-12">
+                          <p>
+                            <i class="ri-twitter-x-line rounded-circle social-icon"></i>
+                            <i class="ri-facebook-circle-fill rounded-circle social-icon"></i>
+                            <i class="ri-instagram-line rounded-circle social-icon"></i>
+                            <i class="ri-linkedin-box-fill rounded-circle social-icon"></i>
+                          </p>
+                        </div>
+                     
+                  </div>
+
+
+                </div>
+            </div>
+        </div>
+ 
+        </div>
+
+        <div class="col-sm-6">
+
+          <div class="card shadow-lgbg-white">
+            <div class="row pl-5">
+                <div class="col-md-4 pl-1">
+                    <img class="img-fluid rounded-circle mt-5" style="height: 120px; width: 120px;" src="team-2.jpg" alt="">
+                </div>
+                <div class="col-sm-8 pl-4 mt-3">
+                    <h5>Sarah Jhonson
+                    </h5>
+
+                    <p class="border border-left-0
+                    border border-right-0
+                    
+                    border border-top-0">Product Manager</p>
+                    <p>Aut maiores voluptates amet et quis praesentium </p>
+                  <div class="row">
+
+                    <div class="col-md-12">
+                      <p>
+                        <i class="ri-twitter-x-line rounded-circle social-icon"></i>
+                        <i class="ri-facebook-circle-fill rounded-circle social-icon"></i>
+                        <i class="ri-instagram-line rounded-circle social-icon"></i>
+                        <i class="ri-linkedin-box-fill rounded-circle social-icon"></i>
+                      </p>
+                    </div>
+                 
+                  
+                  </div>
+
+
+                </div>
+            </div>
+        </div>
+ 
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+          <div class="card shadow-lgbg-white mt-4">
+            <div class="row pl-5">
+                <div class="col-sm-4 pl-1">
+                    <img class="img-fluid rounded-circle mt-5" style="height: 120px; width: 120px;" src="team-3.jpg" alt="">
+                </div>
+                <div class="col-sm-8 pl-4 mt-3">
+                    <h5>William Anderson</h5>
+
+                    <p class="border border-left-0
+                    border border-right-0
+                    
+                    border border-top-0">CTO</p>
+                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                  <div class="row">
+
+                    <div class="col-sm-12">
+                      <p>
+                        <i class="ri-twitter-x-line rounded-circle social-icon"></i>
+                        <i class="ri-facebook-circle-fill rounded-circle social-icon"></i>
+                        <i class="ri-instagram-line rounded-circle social-icon"></i>
+                        <i class="ri-linkedin-box-fill rounded-circle social-icon"></i>
+                      </p>
+                    </div>
+                 
+                  </div>
+
+
+                </div>
+            </div>
+        </div>
+ 
+        </div>
+
+        <div class="col-sm-6">
+
+            <div class="card shadow-lgbg-white mt-4 ">
+                <div class="row pl-5">
+                    <div class="col-sm-4 pl-1">
+                        <img class="img-fluid rounded-circle mt-5" style="height: 120px; width: 120px;" src="team-4.jpg" alt="">
+                    </div>
+                    <div class="col-sm-8 pl-4 mt-3">
+                        <h5>Amanda Jepson</h5>
+                        <p class="border border-left-0
+                        border border-right-0
+                        
+                        border border-top-0">Accountant
+                      </p>
+                        <p>Dolorum tempora officiis odit laborum officiis et et<br> accusamus</p>
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <p>
+                            <i class="ri-twitter-x-line rounded-circle social-icon" id="demo1"></i>
+                            <i class="ri-facebook-circle-fill rounded-circle social-icon"></i>
+                            <i class="ri-instagram-line rounded-circle social-icon"></i>
+                            <i class="ri-linkedin-box-fill rounded-circle social-icon"></i>
+                          </p>
+                        </div>
+                        
+
+                      </div>
+
+
+                    </div>
+                </div>
+            </div>
+      
+
+        </div>
+    </div>
+  </div>
+<br><br>
+  <footer class="bg-dark">
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-sm-12 mt-5">
+              <h3 class="text-white">ZenBlog</h3>
+              <br><br>
+              <p class="text-white">A108 Adam Street</p>
+              <p class="text-white">New York, NY 535022</p>
+              <p class="text-white">Phone: +1 5589 55488 55</p>
+              <p class="text-white">Email: info@example.com</p>
+            </div>
+          </div>
+  <br>
+          <div class="row">
+
+            <div class="col-sm-12">
+              <p>
+                <i class="ri-twitter-x-line rounded-circle social-icon text-white"></i>
+                <i class="ri-facebook-circle-fill rounded-circle social-icon text-white ml-3"></i>
+                <i class="ri-instagram-line rounded-circle social-icon text-white ml-3"></i>
+                <i class="ri-linkedin-box-fill rounded-circle social-icon text-white ml-3"></i>
+              </p>
+  
+            </div>
+
+            <!-- <div class="col-sm-1"><h4><i class="ri-twitter-x-line text-white"></i></h4></div>
+            
+            <div class="col-sm-1"><h4><i class="ri-facebook-circle-fill text-white pl-1"></i></h4></div>
+  
+            
+            <div class="col-sm-1"><h4><i class="ri-instagram-line text-white pl-1"></i></h4></div>
+  
+            
+            <div class="col-sm-1"><h4><i class="ri-linkedin-box-fill text-white pl-1"></i></h4></div> -->
+          </div>
+  
+        </div>
+  
+        <div class="col-sm-8">
+          <div class="row">
+          
+            <div class="col-sm-3 mt-5">
+              <h5 class="text-white font-weight-bold">Useful Links</h5>
+              
+              <p class="text-white">Home</p>
+              <p class="text-white">About us</p>
+              
+              <p class="text-white">Services</p>
+              
+              <p class="text-white">Terms of service</p>
+  
+              <p class="text-white">Privacy policy</p>
+            </div>
+  
+            
+            <div class="col-sm-3 mt-5">
+              <h5 class="text-white font-weight-bold">Our Services</h5>
+              
+              <p class="text-white">Web Design</p>
+              <p class="text-white">Web Development</p>
+              
+              <p class="text-white">Product Management</p>
+              
+              <p class="text-white">Marketing</p>
+  
+              <p class="text-white">Graphic Design</p>
+            </div>
+  
+            
+            <div class="col-sm-3 mt-5">
+              <h5 class="text-white font-weight-bold">Hic solutasetp</h5>
+              
+              <p class="text-white">Molestiae accusamus iure</p>
+              <p class="text-white">Excepturi dignissimos</p>
+              
+              <p class="text-white">Suscipit distinctio</p>
+              
+              <p class="text-white">Dilecta</p>
+  
+              <p class="text-white">Sit quas consectetur</p>
+            </div>
+  
+            
+            <div class="col-sm-3 mt-5">
+              <h5 class="text-white font-weight-bold">Nobis illum</h5>
+              
+              <p class="text-white">Ipsam</p>
+              <p class="text-white">Laudantium dolorum</p>
+              
+              <p class="text-white">Dinera</p>
+              
+              <p class="text-white">Trodelas</p>
+  
+              <p class="text-white">Flexo</p>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+  <br>
+      <div class="border border-left-0
+      
+      border border-right-0
+      
+      border border-top-0 pl-2"></div>
+  
+    <br>
+    
+       <div class="row">
+        <div class="col-sm-12 text-center">
+          <h6 class="text-white">© Copyright ZenBlog All Rights Reserved</h6>
+          <h6 class="text-white">Designed by BootstrapMade</h6>
+        </div>
+       </div>
+  
+  
+  
+    </div>
+  
+  </footer>
+  
+
+
+
+</body>
+</html>

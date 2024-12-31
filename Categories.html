@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        #link-116 {
+  color: #dd1717;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+#link-116::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #ec0c0c;
+  width: 0;
+  transition: width 0.2s ease;
+}
+
+#link-116:hover::after {
+  width: 100%;
+  animation: heartbeat116 1s infinite;
+}
+
+@keyframes heartbeat116 {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+img .vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img .vert-move {
+    -webkit-animation: mover 10s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+    /* Modal Animation */
+    .modal-navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #343a40;
+      padding: 10px 0;
+    }
+    .modal-navbar .nav-link {
+      color: #ffffff;
+      font-size: 16px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .modal-navbar .nav-link:hover {
+      color: #007bff;
+    }
+    /* Modal Styling */
+    .modal-content {
+      border-radius: 10px;
+    }
+    .modal-header {
+      background-color: #212529;
+      color: #ffffff;
+    }
+    .modal-footer {
+      justify-content: center;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .modal-navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .modal-navbar .nav-link {
+        margin: 5px 0;
+      }
+    }
+
+
+    :root {
+  --card-bg: #f9f9f9;
+  --card-border: #ddd;
+  --menu-bg: #ffffff;
+  --menu-border: #eaeaea;
+  --menu-text: #333;
+  --menu-hover-bg: #007bff;
+  --menu-hover-text: #fff;
+  --menu-padding: 15px;
+  --menu-radius: 8px;
+  --menu-gap: 10px;
+  --menu-title-color: #444;
+}
+
+#demo1{
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#demo1 .ser {
+  font-size: 18px;
+  color: var(--menu-title-color);
+  font-weight: bold;
+  border-left: 4px solid var(--menu-hover-bg);
+  padding-left: 10px;
+}
+
+.menu-box {
+  background-color: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: var(--menu-radius);
+  padding: var(--menu-padding);
+  margin-top: 15px;
+}
+
+.menu-title {
+  font-size: 20px;
+  color: var(--menu-title-color);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+  gap: var(--menu-gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin: 0;
+}
+
+.menu-list a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--menu-bg);
+  color: var(--menu-text);
+  text-decoration: none;
+  border: 1px solid var(--menu-border);
+  border-radius: var(--menu-radius);
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu-list a:hover {
+  background-color: var(--menu-hover-bg);
+  color: var(--menu-hover-text);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Hover zoom container styling */
+.hover-zoom {
+  position: relative; /* Enables positioning of child elements */
+  overflow: hidden; /* Keeps the image inside the container */
+  width: 100%;
+  height: auto;
+}
+
+/* Image styling */
+.zoom-img {
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+/* Hover effect */
+.hover-zoom:hover .zoom-img {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+/* Label styling */
+.image-label {
+  position: absolute;
+  top: 220px; /* Adjust distance from the top */
+  right: 10px; /* Adjust distance from the right */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Padding around the text */
+  font-size: 14px; /* Font size */
+  border-radius: 5px; /* Rounded corners for the label */
+  z-index: 1; /* Ensure it appears above the image */
+  font-family: Arial, sans-serif; /* Optional: Change the font */
+}
+
+.pagination .page-link {
+  color: #007bff;
+  text-decoration: none;
+}
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+:root {
+  /* --default-color: #f1f4f7; Default hover color */
+  --hover-scale: 1.2; /* Scale size on hover */
+  --hover-shadow: 0 8px 15px rgba(179, 62, 62, 0.2); /* Shadow effect */
+}
+
+.social-icon-container {
+  display: flex; /* Use flexbox for alignment */
+  /* gap: 30px;Space between icons */
+  letter-spacing: 20px;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Align icons vertically */
+}
+
+.social-icon {
+  display: inline-flex; /* Keep the element inline */
+  /* background-color:rgb(214, 222, 226); Fallback background */
+
+  font-size: 17px;
+ width: 40px;
+  height: 40px; 
+  border:  2px solid white;
+  justify-content:center; /* Center icon inside the circle */
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  transition: all ease-in-out 0.3s;
+}
+
+
+.social-icon:hover {
+  background-color: var(--default-color); /* Change background color on hover */
+  color:#696767!important;
+  border-color: #696767;
+  transform: scale(var(--hover-scale)); /* Scale up on hover */
+  /* box-shadow: var(--hover-shadow); Add shadow on hover */
+}
+
+
+.demo22.active{
+  color: orange;
+}
+
+
+/* Navbar styling */
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  min-width: 200px;
+}
+
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu > li {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  margin-left: -1px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+    </style>
+</head>
+<body
+style="position: relative"
+data-syp="scroll"
+data-target=".navbar"
+data-offset="0">
+
+    <nav class="navbar navbar-expand-md" style="height: 70px; background-color: #f2f2f2;">
+   
+        <div class="container">
+       
+        
+            <a class="navbar-brand text-dark" href="#Home"><h3 style="font-weight: 700;">ZenBlog</h3></a>
+            
+      
+           
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav aling item center pl-5" style="margin-left: 50px;">
+      
+                <li class="nav-item" id="link-116">
+                  <a class="nav-link text-dark" href="ZenBlog.html" class="active" data-target="_blank"><h6 class="demo24">Home</h6></a>
+                </li>
+                <li class="nav-item" id="link-116">
+                  <a class="nav-link text-dark " href="About.html" class="active" data-target="_blank"><h6 class="demo24">About</h6></a>
+                </li>
+                <li class="nav-item" id="link-116">
+                  <a class="nav-link text-dark" href="Singal Page.html" class="active" data-target="_blank"><h6 class="demo24">Singal Post</h6></a>
+                </li>    
+                  
+                <li class="nav-item dropdown mt-2">
+
+                  <a class="nav-link demo22 active" href="Categories.html"><h6>Categories</h6> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              
+                  <ul class="dropdown-menu mt-2">
+                    <li><a href="Categories.html" class="dropdown-item">Category 1</a></li>
+                   
+                    <li><a href="Categories.html" class="dropdown-item">Category 2</a></li>
+                    <li><a href="Categories.html" class="dropdown-item">Category 3</a></li>
+                    <li><a href="Categories.html" class="dropdown-item">Category 4</a></li>
+                  </ul>
+                </li>
+            
+                  
+                <li class="nav-item" id="link-116">
+                      <a class="nav-link text-dark" href="Contact.html"><h6 class="demo24">Contact</h6></a>
+                    </li>  
+                    
+            </ul>
+              
+         
+              <!-- <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="#">Login</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">Registration</a>
+                 </li>    
+               </ul>
+            </div> -->
+            </div>
+        
+      
+           
+      
+            <h4 class="ml-auto">
+              <i class="ri-instagram-line"></i>
+              <i class="ri-twitter-x-line"></i>
+              <i class="ri-facebook-box-fill"></i>
+              <i class="ri-linkedin-box-fill"></i></h4>
+      
+            
+            
+                <button type="button" class="navbar-toggler ml-1 border border-6 text-black" data-toggle="modal" data-target="#myModal">
+                
+                  <h4 class="font-weight-bold"><i class="ri-menu-line"></i></h4>
+                </button>
+                
+      
+               <!-- Modal -->
+               <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="false">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">Modal with Navigation</h4>
+                      
+                      <button type="button" class="close text-white" data-dismiss="modal"><h1 style="margin-top: -10px;">&times;</h1></button>
+          
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                      <!-- Navigation Bar inside Modal -->
+                      <div class="modal-navbar">
+                        <a class="nav-link" href="ZenBlog.html" data-target="_blank">Home</a>
+                        <a class="nav-link" href="About.html" data-target="_blank">About</a>
+                        <a class="nav-link" href="Singal Page.html" data-target="_blank">Singal Post</a>
+                        <a class="nav-link" href="#portfolio">Categories</a>
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                      </div>
+                    </div>
+                    <!-- Modal Footer -->
+      
+                    <div class="modal-footer">
+                      
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+         
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Bootstrap JS -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+              
+    </nav>
+
+
+   
+<br><br>
+      <div class="container">
+    
+        <div class="row">
+            <div class="col-sm-12 d-flex align-items-center justify-content-between border border-left-0
+            border border-right-0
+            
+            border border-top-0">
+              <h4>Category</h4>
+               <h5 style="color:black;"><span><a href="ZenBlog.html" data-target="_blank" style="color: #212529; text-decoration: none;">Home</a></span>/Categories</h5>
+            </div>
+          </div>
+    
+      </div>
+
+<br>
+      <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+
+              <div class="row">
+                <div class="col-sm-6">
+                  
+                  <div class=" hover-zoom position-relative">
+                    <img class="img-fluid w-100 h-100 zoom-img" src="blog-1 (1).jpg" alt="Blog Image">
+                    <span class="image-label">December 12</span>
+                  </div>
+
+                  <div class="card p-4 shadow mb-5" style="background-color: #f9f9f9;">
+                    <h6>Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h6>
+
+
+                    <div class="meta d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <i class="ri-user-line"></i> <span class="ps-2 pl-2">John Doe</span>
+                      </div>
+                      <span class="px-3 text-black-50">/</span>
+                      <div class="d-flex align-items-center">
+                        <i class="ri-folder-line"></i> <span class="ps-2 pl-2">Politics</span>
+                      </div>
+                    </div>
+
+<br>
+                  <div class="card-text">
+                    <p>
+                      Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
+                       praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                    </p>
+                  </div>
+                  <div class="card-text  border border-left-0
+                  border border-right-0
+                  
+                  border border-top-0">
+
+                  </div>
+
+                  <br>
+                  <h5>Read More <i class="ri-corner-down-right-line"></i></h5>
+                </div>
+
+                
+               
+
+
+                
+
+
+
+                                    
+                </div>
+                <div class="col-sm-6">
+                  
+                  <div class=" hover-zoom position-relative">
+                    <img class="img-fluid w-100 h-100 zoom-img" src="blog-2.jpg" alt="Blog Image">
+                    <span class="image-label">December 12</span>
+                  </div>
+
+                  <div class="card p-4 shadow mb-5" style="background-color: #f9f9f9;">
+                    <h6>Nisi magni odit consequatur autem nulla dolorem</h6>
+
+
+                    <div class="meta d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <i class="ri-user-line"></i> <span class="ps-2 pl-2">John Doe</span>
+                      </div>
+                      <span class="px-3 text-black-50">/</span>
+                      <div class="d-flex align-items-center">
+                        <i class="ri-folder-line"></i> <span class="ps-2 pl-2">Politics</span>
+                      </div>
+                    </div>
+
+<br>
+                  <div class="card-text mt-3">
+                    <p>
+                      
+                      Incidunt voluptate sit temporibus aperiam.
+                      Quia vitae aut sint ullam quis illum voluptatum
+                      et. Quo libero rerum voluptatem pariatur nam.
+                      
+                    </p>
+                  </div>
+                  <div class="card-text  border border-left-0
+                  border border-right-0
+                  
+                  border border-top-0">
+
+                  </div>
+
+                  <br>
+                  <h5>Read More <i class="ri-corner-down-right-line"></i></h5>
+                </div>
+
+                
+               
+
+
+                
+
+
+
+                                    
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-sm-6">
+                  
+                  <div class=" hover-zoom position-relative">
+                    <img class="img-fluid w-100 h-100 zoom-img" src="blog-3.jpg" alt="Blog Image">
+                    <span class="image-label">December 12</span>
+                  </div>
+
+                  <div class="card p-4 shadow mb-5" style="background-color: #f9f9f9;">
+                    <h6>Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h6>
+
+
+                    <div class="meta d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <i class="ri-user-line"></i> <span class="ps-2 pl-2">John Doe</span>
+                      </div>
+                      <span class="px-3 text-black-50">/</span>
+                      <div class="d-flex align-items-center">
+                        <i class="ri-folder-line"></i> <span class="ps-2 pl-2">Politics</span>
+                      </div>
+                    </div>
+
+<br>
+                  <div class="card-text mt-3">
+                    <p>
+                      
+                      Aut iste neque ut illum qui perspiciatis similique recusandae non.
+                       Fugit autem dolorem labore omnis et. Eum temporibus fugiat volupt
+                       ate enim tenetur<br> sunt omnis.
+                      
+                    </p>
+                  </div>
+                  <div class="card-text  border border-left-0
+                  border border-right-0
+                  
+                  border border-top-0">
+
+                  </div>
+
+                  <br>
+                  <h5>Read More <i class="ri-corner-down-right-line"></i></h5>
+                </div>
+
+                
+               
+
+
+                
+
+
+
+                                    
+                </div>
+                <div class="col-sm-6">
+                  
+                  <div class=" hover-zoom position-relative">
+                    <img class="img-fluid w-100 h-100 zoom-img" src="blog-4.jpg" alt="Blog Image">
+                    <span class="image-label">December 12</span>
+                  </div>
+
+                  <div class="card p-4 shadow mb-5" style="background-color: #f9f9f9;">
+                    <h6>Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</h6>
+
+
+                    <div class="meta d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <i class="ri-user-line"></i> <span class="ps-2 pl-2">John Doe</span>
+                      </div>
+                      <span class="px-3 text-black-50">/</span>
+                      <div class="d-flex align-items-center">
+                        <i class="ri-folder-line"></i> <span class="ps-2 pl-2">Politics</span>
+                      </div>
+                    </div>
+
+<br>
+                  <div class="card-text">
+                    <p>
+                      
+                      Aspernatur rerum perferendis et sint. Voluptates cupiditate
+                      voluptas atque quae. Rem veritatis rerum enim et autem. Saepe
+                       atque cum eligendi eaque iste omnis a qui.
+                      
+                    </p>
+                  </div>
+                  <div class="card-text  border border-left-0
+                  border border-right-0
+                  
+                  border border-top-0">
+
+                  </div>
+
+                  <br>
+                  <h5>Read More <i class="ri-corner-down-right-line"></i></h5>
+                </div>
+
+                
+               
+
+
+                
+
+
+
+                                    
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-sm-6">
+                  
+                  <div class=" hover-zoom position-relative">
+                    <img class="img-fluid w-100 h-100 zoom-img" src="blog-5.jpg" alt="Blog Image">
+                    <span class="image-label">December 12</span>
+                  </div>
+
+                  <div class="card p-4 shadow mb-5" style="background-color: #f9f9f9;">
+                    <h6>Accusamus quaerat aliquam qui debitis facilis consequatur</h6>
+
+
+                    <div class="meta d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <i class="ri-user-line"></i> <span class="ps-2 pl-2">John Doe</span>
+                      </div>
+                      <span class="px-3 text-black-50">/</span>
+                      <div class="d-flex align-items-center">
+                        <i class="ri-folder-line"></i> <span class="ps-2 pl-2">Politics</span>
+                      </div>
+                    </div>
+
+<br>
+                  <div class="card-text">
+                    <p>
+                      
+                      In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. 
+                      Autem vitae quas aperiam nesciunt mollitia tempora odio omnis. Ipsa odi
+                      t sit ut <br>amet necessitatibus. Quo ullam ut<br> corrupti autem consequuntur
+                       totam dolorem.
+                      
+                    </p>
+                  </div>
+                  <div class="card-text  border border-left-0
+                  border border-right-0
+                  
+                  border border-top-0">
+
+                  </div>
+
+                  <br>
+                  <h5>Read More <i class="ri-corner-down-right-line"></i></h5>
+                </div>
+
+                
+               
+
+
+                
+
+
+
+                                    
+                </div>
+                <div class="col-sm-6">
+                  
+                  <div class=" hover-zoom position-relative">
+                    <img class="img-fluid w-100 h-100 zoom-img" src="blog-6.jpg" alt="Blog Image">
+                    <span class="image-label">December 12</span>
+                  </div>
+
+                  <div class="card p-4 shadow mb-5" style="background-color: #f9f9f9;">
+                    <h6>Distinctio provident quibusdam numquam aperiam aut</h6>
+
+
+                    <div class="meta d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <i class="ri-user-line"></i> <span class="ps-2 pl-2">John Doe</span>
+                      </div>
+                      <span class="px-3 text-black-50">/</span>
+                      <div class="d-flex align-items-center">
+                        <i class="ri-folder-line"></i> <span class="ps-2 pl-2">Politics</span>
+                      </div>
+                    </div>
+
+<br>
+                  <div class="card-text">
+                    <p>
+                      
+                      Expedita et temporibus eligendi enim molestiae est architecto 
+                      praesentium dolores. Illo laboriosam officiis quis. Labore offi
+                      cia quia sit voluptatem nisi est dignissimos totam. Et voluptat
+                      
+                      
+                      e et consectetur voluptatem id dolor magni impedit. Omnis dolor
+                      es sit.
+                      
+                    </p>
+                  </div>
+                  <div class="card-text  border border-left-0
+                  border border-right-0
+                  
+                  border border-top-0">
+
+                  </div>
+
+                  <br>
+                  <h5>Read More <i class="ri-corner-down-right-line"></i></h5>
+                </div>
+
+                
+               
+
+
+                
+
+
+
+                                    
+                </div>
+              </div>
+
+              <nav aria-label="Page navigation">
+                <div class="d-flex justify-content-center">
+                  <ul class="pagination">
+                    <!-- <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Previous">
+                        <i class="bi bi-chevron-left"></i>
+                      </a>
+                    </li> -->
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item active" aria-current="page"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                    <li class="page-item"><a href="#" class="page-link">10</a></li>
+                    <!-- <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Next">
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </li> -->
+                  </ul>
+                </div>
+              </nav>
+              
+            </div>
+
+            <div class="col-sm-4">
+
+
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card p-4 shadow mb-5 bg-white">
+                    <div class="d-flex align-items-center w-100">
+               
+                      <img src="blog-author.jpg" class="rounded-circle flex-shrink-0 w-50 h-50" alt="">
+               <div class="pl-3">
+                        <h4 style="font-family: Arial, Helvetica, sans-serif;">Jane Smith</h4>
+                        <div class="social-links">
+
+                          <h5 class="pl-1"><i class="ri-twitter-x-line rounded-circle social-icon"></i>
+                            <i class="ri-facebook-circle-fill rounded-circle social-icon"></i>
+                            <i class="ri-instagram-line rounded-circle social-icon"></i>
+                            <i class="ri-linkedin-box-fill rounded-circle social-icon"></i>
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+<br>
+                    <p class="pl-1 font-italic" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum 
+                       sed possimus accusantium. Quas repellat voluptatem officia num
+                       quam sint aspernatur voluptas. Esse et accusantium ut unde vol
+                       uptas.</p>
+                  </div>
+                </div>  
+              </div>
+
+               
+              <div class="card shadow mb-5 bg-white">
+                <div class="row p-4">
+                  <div class="col-sm-12">
+                    <div class="border border-bottom-0
+                    border border-right-0
+                    
+                    border border-top-0">
+
+                    </div>
+                    <h5 class=" mt-3 ser"> <span class="pl-4">Search</span></h5>
+                    
+<br>
+                    <input type="text" class="form-control" id="Search" style="border-radius: 20px;">
+                  </div>
+
+
+                </div>
+              </div>
+
+
+              <div class="card shadow mb-5 bg-white">
+                <div class="row p-3">
+                  <div class="col-sm-12">
+
+                    <div class="border border-bottom-0
+                      border border-right-0
+                      
+                      border border-top-0">
+  
+                    </div>
+                      <h5 class=" mt-3 ser"> <span class="pl-4">Recent Posts</span></h5>
+                  
+                  </div>
+                </div>
+
+                            
+<div class="d-flex p-3">
+  <div class="comment-img mt-1">
+    <img  src="blog-recent-1.jpg" alt="Commenter Image" style="height: 3rem; width: 4rem;">
+ 
+  </div>
+  <div class="pl-4">
+    <h6>Nihil blanditiis at in nihil autem</h6>
+    <time datetime="2020-01-01">Jan 1, 2020</time>
+   
+  </div>
+</div>
+<div class="d-flex p-3">
+  <div class="comment-img mt-1">
+    <img  src="blog-recent-2.jpg" alt="Commenter Image" style="height: 3rem; width: 4rem;">
+ 
+  </div>
+  <div class="pl-4">
+    <h6>Quidem autem et impedit</h6>
+    <time datetime="2020-01-01">Jan 1, 2020</time>
+   
+  </div>
+</div>
+<div class="d-flex p-3">
+  <div class="comment-img mt-1">
+    <img  src="blog-recent-3.jpg" alt="Commenter Image" style="height: 3rem; width: 4rem;">
+ 
+  </div>
+  <div class="pl-4">
+    <h6>Id quia et et ut maxime similique occaecati ut</h6>
+    <time datetime="2020-01-01">Jan 1, 2020</time>
+   
+  </div>
+</div>
+<div class="d-flex p-3">
+  <div class="comment-img mt-1">
+    <img  src="blog-recent-4.jpg" alt="Commenter Image" style="height: 3rem; width: 4rem;">
+ 
+  </div>
+  <div class="pl-4">
+    <h6>Laborum corporis quo dara net para</h6>
+    <time datetime="2020-01-01">Jan 1, 2020</time>
+   
+  </div>
+</div>
+<div class="d-flex p-3">
+  <div class="comment-img mt-1">
+    <img  src="blog-recent-5.jpg" alt="Commenter Image" style="height: 3rem; width: 4rem;">
+ 
+  </div>
+  <div class="pl-4">
+    <h6>Et dolores corrupti quae illo quod dolor</h6>
+    <time datetime="2020-01-01">Jan 1, 2020</time>
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+              </div>
+
+
+              <div class="card" id="demo1">
+                <div class="row p-3">
+                  <div class="col-sm-12">
+                    <div class="border border-bottom-0 border-right-0 border-top-0"></div>
+                    <h5 class="mt-3 ser"><span class="pl-4">Tags</span></h5>
+              
+                    <div class="menu-box">
+                      <h3 class="menu-title">Our Menu</h3>
+                      <ul class="menu-list">
+                        <li><a href="#">App</a></li>
+                        <li><a href="#">IT</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Mac</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Office</a></li>
+                        <li><a href="#">Creative</a></li>
+                        <li><a href="#">Studio</a></li>
+                        <li><a href="#">Smart</a></li>
+                        <li><a href="#">Tips</a></li>
+                        <li><a href="#">Marketing</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            
+            
+            
+            
+            
+            </div>
+
+        </div>
+
+      </div>
+
+<br>
+
+<footer class="bg-dark">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col-sm-12 mt-5">
+            <h3 class="text-white">ZenBlog</h3>
+            <br><br>
+            <p class="text-white">A108 Adam Street</p>
+            <p class="text-white">New York, NY 535022</p>
+            <p class="text-white">Phone: +1 5589 55488 55</p>
+            <p class="text-white">Email: info@example.com</p>
+          </div>
+        </div>
+<br>
+        <div class="row">
+          <div class="col-sm-12">
+            <p>
+              <i class="ri-twitter-x-line rounded-circle social-icon text-white"></i>
+              <i class="ri-facebook-circle-fill rounded-circle social-icon text-white ml-3"></i>
+              <i class="ri-instagram-line rounded-circle social-icon text-white ml-3"></i>
+              <i class="ri-linkedin-box-fill rounded-circle social-icon text-white ml-3"></i>
+            </p>
+
+          </div>
+          <!-- <div class="col-sm-1"><h4><i class="ri-twitter-x-line text-white"></i></h4></div>
+          
+          <div class="col-sm-1"><h4><i class="ri-facebook-circle-fill text-white pl-1"></i></h4></div>
+
+          
+          <div class="col-sm-1"><h4><i class="ri-instagram-line text-white pl-1"></i></h4></div>
+
+          
+          <div class="col-sm-1"><h4><i class="ri-linkedin-box-fill text-white pl-1"></i></h4></div> -->
+        </div>
+
+      </div>
+
+      <div class="col-sm-8">
+        <div class="row">
+        
+          <div class="col-sm-3 mt-5">
+            <h5 class="text-white font-weight-bold">Useful Links</h5>
+            
+            <p class="text-white">Home</p>
+            <p class="text-white">About us</p>
+            
+            <p class="text-white">Services</p>
+            
+            <p class="text-white">Terms of service</p>
+
+            <p class="text-white">Privacy policy</p>
+          </div>
+
+          
+          <div class="col-sm-3 mt-5">
+            <h5 class="text-white font-weight-bold">Our Services</h5>
+            
+            <p class="text-white">Web Design</p>
+            <p class="text-white">Web Development</p>
+            
+            <p class="text-white">Product Management</p>
+            
+            <p class="text-white">Marketing</p>
+
+            <p class="text-white">Graphic Design</p>
+          </div>
+
+          
+          <div class="col-sm-3 mt-5">
+            <h5 class="text-white font-weight-bold">Hic solutasetp</h5>
+            
+            <p class="text-white">Molestiae accusamus iure</p>
+            <p class="text-white">Excepturi dignissimos</p>
+            
+            <p class="text-white">Suscipit distinctio</p>
+            
+            <p class="text-white">Dilecta</p>
+
+            <p class="text-white">Sit quas consectetur</p>
+          </div>
+
+          
+          <div class="col-sm-3 mt-5">
+            <h5 class="text-white font-weight-bold">Nobis illum</h5>
+            
+            <p class="text-white">Ipsam</p>
+            <p class="text-white">Laudantium dolorum</p>
+            
+            <p class="text-white">Dinera</p>
+            
+            <p class="text-white">Trodelas</p>
+
+            <p class="text-white">Flexo</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+<br>
+    <div class="border border-left-0
+    
+    border border-right-0
+    
+    border border-top-0 pl-2"></div>
+
+  <br>
+  
+     <div class="row">
+      <div class="col-sm-12 text-center">
+        <h6 class="text-white">© Copyright ZenBlog All Rights Reserved</h6>
+        <h6 class="text-white">Designed by BootstrapMade</h6>
+      </div>
+     </div>
+
+
+
+  </div>
+
+</footer>
+
+
+
+    
+</body>
+</html>
